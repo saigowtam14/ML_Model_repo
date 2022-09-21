@@ -19,18 +19,16 @@ day1 = 14
 dmsp_id = 17
 
 inpath = "inp_solar_imf"+str(year)+".txt"
-modelpath = 'D:/ML_IEM/modelrun/'
-wpath = 'D:/ML_IEM/modelrun/weimer2005/'
 start_tm = str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+' 05:00:00'
 end_tm = str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+' 23:30:00'
 
-f = open('D:/ML_IEM/superDARN/SuperDARN'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+'.pckl', 'rb')
+f = open('SuperDARN'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+'.pckl', 'rb')
 sd = pickle.load(f)
 f.close()
 f = open('cpcp'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+'.pckl', 'rb')
 cp = pickle.load(f)
 f.close()
-wei = pd.read_pickle(wpath+'weimer'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1))
+wei = pd.read_pickle('weimer'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1))
 
 f = open('dms_'+str(year)+"{:02d}".format(month)+"{:02d}".format(day1)+'_'+str(dmsp_id)+'.pckl', 'rb')
 dmsp1 = pickle.load(f)
@@ -141,13 +139,13 @@ wpath = 'D:/ML_IEM/modelrun/weimer2005/'
 start_tm = str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+' 12:00:00'
 end_tm = str(year)+'{:02d}'.format(month)+'{:02d}'.format(day2)+' 23:30:00'
 
-f = open('D:/ML_IEM/superDARN/SuperDARN'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+'.pckl', 'rb')
+f = open('SuperDARN'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+'.pckl', 'rb')
 sd = pickle.load(f)
 f.close()
 f = open('cpcp'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1)+'.pckl', 'rb')
 cp = pickle.load(f)
 f.close()
-wei = pd.read_pickle(wpath+'weimer'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1))
+wei = pd.read_pickle('weimer'+str(year)+'{:02d}'.format(month)+'{:02d}'.format(day1))
 
 f = open('dms_'+str(year)+"{:02d}".format(month)+"{:02d}".format(day1)+'_'+str(dmsp_id)+'.pckl', 'rb')
 dmsp1 = pickle.load(f)

@@ -330,7 +330,7 @@ z1 = jhp;
 z2 = jht
 jhnorm = np.sqrt(z1**2 + z2**2)
 vmin = 0;
-vmax = 6;
+vmax = 4;
 norm = colors.Normalize(vmin=vmin, vmax=vmax)
 cmap = 'seismic'
 ax1 = plt.subplot(1,3,3,projection='polar')
